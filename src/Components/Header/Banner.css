@@ -1,0 +1,7 @@
+.mybg{
+    background-image: url('/src/assets/Resources/Rectangle-4281 save.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: linear-gradient( rgba(255, 255, 255, 0.95)); */
+    background-blend-mode: overlay;
+}
