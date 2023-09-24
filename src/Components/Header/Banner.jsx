@@ -13,7 +13,7 @@ const Banner = () => {
     <input className="py-2.5 px-3 rounded-l-lg md:w-[470px] border-gray-300 border" type="text" name="" id="" placeholder="Search Here..." />
 
     
-  <button type="button" className="focus:outline-none  text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium  text-sm px-5 py-3.5  dark:bg-purple-600 dark:hover:bg-purple-700 rounded-r-lg border-none dark:focus:ring-purple-900">Purple</button>
+  <button type="button" className="focus:outline-none  text-white bg-[#FF444A] hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium  text-sm px-5 py-3.5  dark:hover:bg-purple-700 rounded-r-lg border-none dark:focus:ring-purple-900">Search</button>
 
 
    
