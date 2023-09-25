@@ -13,7 +13,7 @@ const Card = () => {
   const donations = useLoaderData();
 
   useEffect(() => {
-    const findDonation = donations.find((donation) => donation.id == id);
+    const findDonation = donations.find((donation) => donation.id === id);
 
     setDonation(findDonation);
   }, [donations, id]);
@@ -31,15 +31,27 @@ const Card = () => {
         swal("Donated successfully", "Thank you for your donation", "success");
     }
     else {
-        addedDonation.push(...donationCategory, donation);
-        localStorage.setItem('donation', JSON.stringify(addedDonation))
-        swal("Donated successfully", "Thank you for your donation", "success");
+
+        const isExist = donationCategory.find((donation) => donation.id === id);
+        console.log('isExist diye aslm', isExist);
+
+
+        if(!isExist) {
+            addedDonation.push(...donationCategory, donation);
+            localStorage.setItem('donation', JSON.stringify(addedDonation))
+            swal("Donated successfully", "Thank you for your donation", "success");
+        }
+        else{
+            swal("Donated Already, Sir", "Thank you for your donation", "warning");
+        }
+       
+        
     }
 
-      console.log('func diye aslm',donation)
+    //   console.log('func diye aslm',donation)
   }
 
-  console.log(donation);
+//   console.log(donation);
 
   return (
     <div>
