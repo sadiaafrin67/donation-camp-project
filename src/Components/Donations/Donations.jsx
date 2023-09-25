@@ -1,11 +1,20 @@
+import DonationsCard from "../DonationsCard/DonationsCard";
+import PropTypes from 'prop-types';
 
 
-const Donations = () => {
+const Donations = ({ donations }) => {
+    console.log(donations)
     return (
-        <div>
-            <h2>im phone</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-20 lg:mx-auto mx-4">
+           {
+               donations.map(donation => <DonationsCard key={donation.id} donation={donation}></DonationsCard>)
+           }
         </div>
     );
 };
+
+Donations.propTypes = {
+    donations: PropTypes.array.isRequired
+}
 
 export default Donations;
