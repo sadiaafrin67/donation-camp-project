@@ -7,7 +7,7 @@ const Donations = ({ donations }) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-20 lg:mx-auto mx-4">
            {
-               donations.map(donation => <DonationsCard key={donation.id} donation={donation}></DonationsCard>)
+               donations.map(donations => <DonationsCard key={donations.id} donations={donations}></DonationsCard>)
            }
         </div>
     );

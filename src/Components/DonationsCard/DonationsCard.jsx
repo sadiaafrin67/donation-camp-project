@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
-const DonationsCard = ({ donation }) => {
-  console.log(donation);
+const DonationsCard = ({ donations }) => {
+  console.log(donations);
   const {
     id,
     picture,
@@ -15,9 +16,12 @@ const DonationsCard = ({ donation }) => {
     price,
     category_text_color,
     card_bg,
-  } = donation;
+  } = donations;
   return (
     <div>
+
+      <Link to={`/donations/${id}`}>
+      
       <div className="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
         <div className="relative m-0 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
           <img className='w-full h-[194px]'
@@ -36,6 +40,9 @@ const DonationsCard = ({ donation }) => {
         </div>
 
       </div>
+
+      </Link>
+
     </div>
   );
 };
