@@ -45,7 +45,7 @@ const Banner = ({ donations, filteredData, setFilteredData }) => {
 
           <button
             type="submit"
-            className="focus:outline-none  text-white bg-[#FF444A] hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium  text-sm px-5 py-3.5  dark:hover:bg-purple-700 rounded-r-lg border-none dark:focus:ring-purple-900"
+            className="focus:outline-none  text-white bg-[#FF444A] hover:bg-red-600 focus:ring-purple-300  font-medium  text-sm px-5 py-3.5   rounded-r-lg border-none "
           >
             Search
           </button>

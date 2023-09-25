@@ -44,7 +44,7 @@ const Donation = () => {
             <div className="text-center mx-auto mb-8">
             <button onClick={() => setIsShow(!isShow)}
               type="button"
-              className="focus:outline-none text-white  hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-[#009444]"
+              className="focus:outline-none text-white  hover:bg-green-500 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-[#009444]"
             >
               {isShow ? "Show Less" : "Show More"}
             </button>

@@ -39,7 +39,7 @@ const SingleCard = ({ donation }) => {
             <button
               style={{ backgroundColor: donation.title_text_color }}
               type="button"
-              className="focus:outline-none text-white  hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 "
+              className="focus:outline-none text-white  hover:bg-purple-700 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 "
             >
               View Details
             </button>
