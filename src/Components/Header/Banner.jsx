@@ -2,11 +2,12 @@ import './Banner.css'
 
 const Banner = () => {
     return (
-        <div className="h-[80vh] w-full mybg bg-gray-50/95 backdrop-brightness-75">
 
+        
+        <div className="md:h-screen lg:h-[780px] w-full mybg bg-gray-50/95 backdrop-brightness-75">
 
            <div>
-           <h1 className=" text-2xl font-extrabold md:text-5xl  md:font-bold flex items-center justify-center pt-24 pb-14 mx-auto md:text-center">I Grow By Helping People In Need</h1>
+           <h1 className=" text-2xl font-extrabold md:text-5xl  md:font-bold flex items-center justify-center pt-24 pb-14 mx-auto lg:pt-56 md:text-center">I Grow By Helping People In Need</h1>
 
 <div className=" flex justify-center items-center  mx-auto text-center ">
 
