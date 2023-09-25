@@ -23,6 +23,7 @@ const DonationsCard = ({ donations }) => {
           <div className="relative m-0 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
             <img className="w-full h-[194px]" src={picture} />
           </div>
+
           <div style={{ backgroundColor: card_bg }} className="p-6">
             <h4
               style={{ color: title_text_color, backgroundColor: category_bg }}
@@ -38,6 +39,8 @@ const DonationsCard = ({ donations }) => {
               {title}
             </p>
           </div>
+
+
         </div>
       </Link>
     </div>

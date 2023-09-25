@@ -15,7 +15,7 @@ const Donations = ({ donations }) => {
       </div>
 
       {donations.length === 0 && (
-        <h1 className="text-center font-extrabold text-4xl h-[80vh]">No Donations Found</h1>
+        <h1 className="text-center font-extrabold text-4xl h-[80vh]">No Donation Catagory Found</h1>
       )}
     </>
   );

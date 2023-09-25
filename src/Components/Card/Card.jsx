@@ -13,7 +13,7 @@ const Card = () => {
   const donations = useLoaderData();
 
   useEffect(() => {
-    const findDonation = donations.find((donation) => donation.id === id);
+    const findDonation = donations.find((donation) => donation.id == id);
 
     setDonation(findDonation);
   }, [donations, id]);
@@ -24,6 +24,7 @@ const Card = () => {
     const addedDonation = []
 
     const donationCategory = JSON.parse(localStorage.getItem('donation'));
+    // console.log('kii pblm', donationCategory);
 
     if (!donationCategory) {
         addedDonation.push(donation);
@@ -32,8 +33,9 @@ const Card = () => {
     }
     else {
 
-        const isExist = donationCategory.find((donation) => donation.id === id);
-        console.log('isExist diye aslm', isExist);
+        const isExist = donationCategory.find((donation) => donation.id == id);
+
+        // console.log('isExist diye aslm', isExist);
 
 
         if(!isExist) {
