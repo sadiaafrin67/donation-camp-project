@@ -6,7 +6,7 @@ const Navbar = () => {
       <nav className="flex justify-between items-center py-7 ">
 
         <div>
-            <img className="h-14" src="/src/assets/Resources/Logo.png" alt="img" />
+            <img className="h-14" src="https://i.ibb.co/jJD8NQN/Logo.png"/>
         </div>
         <ul className="md:flex gap-7 ">
 
