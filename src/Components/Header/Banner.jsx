@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import "./Banner.css";
 
 const Banner = ({ donations, filteredData, setFilteredData }) => {
@@ -27,7 +28,7 @@ const Banner = ({ donations, filteredData, setFilteredData }) => {
 
 
   return (
-    <div className="md:h-screen lg:min-h-[780px] bg-contain w-full mybg bg-gray-50/95 backdrop-brightness-75">
+    <div className="md:h-screen lg:min-h-[780px]  bg-contain w-full mybg bg-gray-50/95 backdrop-brightness-75 ">
       <div>
         <h1 className=" text-2xl font-extrabold md:text-5xl  md:font-bold flex items-center justify-center pt-24 pb-14 mx-auto lg:pt-56 md:text-center">
           I Grow By Helping People In Need
@@ -55,5 +56,11 @@ const Banner = ({ donations, filteredData, setFilteredData }) => {
     </div>
   );
 };
+
+Banner.propTypes = {
+  donations: PropTypes.array,
+  filteredData: PropTypes.array,
+  setFilteredData: PropTypes.func
+}
 
 export default Banner;

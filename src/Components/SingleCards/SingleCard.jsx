@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 const SingleCard = ({ donation }) => {
@@ -50,5 +51,9 @@ const SingleCard = ({ donation }) => {
     
   );
 };
+
+SingleCard.propTypes = {
+  donation: PropTypes.object.isRequired,
+}
 
 export default SingleCard;
