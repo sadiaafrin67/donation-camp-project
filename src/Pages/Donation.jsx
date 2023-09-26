@@ -5,7 +5,15 @@ import SingleCard from "../Components/SingleCards/SingleCard";
 const Donation = () => {
   const [donation, setDonation] = useState([]);
   const [noDataFound, setNoDataFound] = useState(false);
-  const [isShow, setIsShow] = useState(false);
+  const [isShow, setIsShow] = useState(4);
+  const [isButtonShow, setIsButtonShow] = useState(false);
+
+  const handleButtonShow = () => {
+    setIsButtonShow((prev) => {
+    
+      return !prev;
+    });
+  };
 
   useEffect(() => {
     const donationCategory = JSON.parse(localStorage.getItem("donation"));
@@ -17,8 +25,6 @@ const Donation = () => {
     }
   }, []);
 
-  
-
   // console.log(donation);
   return (
     <div>
@@ -29,27 +35,31 @@ const Donation = () => {
       ) : (
         <div>
           <div className="grid grid-cols-1 lg:grid-cols-2  gap-5 my-20 lg:mx-auto mx-4">
-
-            {
-                isShow ? donation.map((donation) => (
-                    <SingleCard donation={donation} key={donation.id} />
-                  )) : donation.slice(0, 4).map((donation) => (
-                    <SingleCard donation={donation} key={donation.id} />
-                  ))
-            }
-
-            
+            {donation.slice(0, isShow).map((donation) => (
+              <SingleCard donation={donation} key={donation.id} />
+            ))}
           </div>
           
-            <div className="text-center mx-auto mb-8">
-            <button onClick={() => setIsShow(!isShow)}
+          {/* {console.log(donation.length)} */}
+
+          <div
+            className={`${
+              donation.length !== 0 && donation.length > 4 ? "" : "hidden"
+            }  text-center mx-auto  justify-center items-center mb-8`}
+          >
+            
+            <button
+              onClick={() => {
+                setIsShow(donation.length); handleButtonShow();
+              } }
               type="button"
-              className="focus:outline-none text-white  hover:bg-green-500 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-[#009444]"
+              className= {
+                `focus:outline-none text-white  hover:bg-red-600 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-[#FF444A] text-center ${isButtonShow ? "hidden" : ""}`
+              }
             >
-              {isShow ? "Show Less" : "Show More"}
+              Show More
             </button>
-            </div>
-         
+          </div>
         </div>
       )}
     </div>

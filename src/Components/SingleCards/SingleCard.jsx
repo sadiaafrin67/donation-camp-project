@@ -35,7 +35,7 @@ const SingleCard = ({ donation }) => {
             ${donation.price}
           </p>
 
-          <Link className="inline-block " href="#">
+          <Link to={`/donations/${donation.id}`} className="inline-block " href="#">
             <button
               style={{ backgroundColor: donation.title_text_color }}
               type="button"
